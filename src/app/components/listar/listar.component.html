@@ -1,0 +1,30 @@
+<h1>Personas</h1>
+<hr>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of personas">
+            <th scope="row">{{ p.id }}</th>
+            <td>{{ p.nombre}}</td>
+            <td>{{ p.apellido }}</td>
+            <td>
+                <button (click)="editar(p)" class="btn btn-warning m-1">
+                    <i class="fa fa-edit"></i>
+                    Edit
+                </button>
+                <button (click)=borrar(p) class="btn btn-danger m-1">
+                    <i class="fa fa-eraser"></i>
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

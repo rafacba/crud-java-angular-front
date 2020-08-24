@@ -1,0 +1,23 @@
+<h1>Agregar Personas</h1>
+<hr>
+
+<form >
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text"
+               class="form-control"
+               id="nombre"
+               aria-describedby="ayudaNombre"
+               #nombre>
+        <small id="ayudaNombre" class="form-text text-muted">Su nombre tal cual aparece en el DNI</small>
+    </div>
+    <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text"
+               class="form-control"
+               id="apellid0"
+               #apellido>
+    </div>
+
+    <button (click)="guardar(nombre.value,apellido.value)" class="btn btn-primary">Guardar</button>
+</form>
